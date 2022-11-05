@@ -18,20 +18,20 @@ services:
     networks:
       - net
 
-  grafana:
-    image: grafana/grafana:latest
-    container_name: grafana
-    hostname: grafana
-    environment:
-      - GF_AUTH_PROXY_ENABLED=true
-      - GF_PATHS_PROVISIONING=/var/lib/grafana/provisioning/
-    volumes:
-      - ./provisioning/:/var/lib/grafana/provisioning/
-      - ./grafana.ini:/etc/grafana/grafana.ini
-    ports:
-      - 3000:3000
-    networks:
-      - net
-    depends_on:
-      - prometheus
+#  grafana:
+#    image: grafana/grafana:latest
+#    container_name: grafana
+#    hostname: grafana
+#    environment:
+#      - GF_AUTH_PROXY_ENABLED=true
+#      - GF_PATHS_PROVISIONING=/var/lib/grafana/provisioning/
+#    volumes:
+#      - ./provisioning/:/var/lib/grafana/provisioning/
+#      - ./grafana.ini:/etc/grafana/grafana.ini
+#    ports:
+#      - 3000:3000
+#    networks:
+#      - net
+#    depends_on:
+#      - prometheus
 
